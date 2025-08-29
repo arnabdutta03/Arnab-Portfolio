@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
+
+body.light {
+  /* Light Mode */
+  --bg-light: #ffffff;
+  --bg: #f2f2f2;
+  --bg-dark: #e6e6e6;
+
+  --text: #0d0d0d;
+  --mute-text: #4d4d4d;
+
+  --bg-skills: #f3f2f2;
+  --bg-skills-inner: #f7f7f7;
+}
+body.dark {
+  /* Dark Mode */
+  --bg-dark: #000000;
+  --bg: hsl(0, 0%, 5%);
+  --bg-light: #1a1a1a;
+
+  --text: #f2f2f2;
+  --mute-text: #b3b3b3;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: "Outfit", sans-serif;
+}
+
+@layer utilities {
+  .cursor-fancy {
+    cursor: url("/cursor2.png") 4 4, auto;
+  }
+
+  .cursor-fancy a,
+  .cursor-fancy button {
+    cursor: url("/cursor2.png") 4 4, pointer;
+  }
+}
+
+@layer utilities {
+  .glow-hover:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  }
+}
+
+@layer utilities {
+  .glow-hover-text {
+    text-shadow: 0px 0px 15px #f7f7f7;
+  }
+}
+
+@layer utilities {
+  .glow-hover-skills:hover {
+    text-shadow: 0 0 8px rgba(0, 255, 191, 0.8);
+  }
+}
+
+/* skill hover rotate left */
+@layer utilities {
+  .hover-skills-left {
+    transition: transform 0.2s ease-in-out;
+  }
+  .hover-skills-left:hover {
+    transform: rotate(-4deg) scale(1.07);
+  }
+}
+
+/* skill hover rotate right */
+@layer utilities {
+  .hover-skills-right {
+    transition: transform 0.2s ease-in-out;
+  }
+  .hover-skills-right:hover {
+    transform: rotate(4deg) scale(1.07);
+  }
+}
+
