@@ -27,7 +27,7 @@ function About() {
           </p>
           <div className="flex justify-center">
             <img
-            src="/profile.png"
+            src="./profile.png"
             alt="Arnab Dutta"
             className="w-80 h-80 rounded-2xl shadow-lg object-cover"
           />
@@ -37,25 +37,25 @@ function About() {
 
         <div className="mr-20 mt-12">
           <div className="flex">
-            <img src="/star.png" alt="star icon" className="w-8 h-8 mr-1.5" />
+            <img src="./star.png" alt="star icon" className="w-8 h-8 mr-1.5" />
             <p className="text-gray-300 leading-relaxed mb-6 mt-0.5 text-justify">
               I build modern, user-friendly web applications with JavaScript, React.js, Node.js, and MongoDB — designed to look great and work flawlessly.
             </p>
           </div>
           <div className="flex">
-            <img src="/star.png" alt="star icon" className="w-8 h-8 mr-1.5" />
+            <img src="./star.png" alt="star icon" className="w-8 h-8 mr-1.5" />
             <p className="text-gray-300 leading-relaxed mb-6 mt-0.5 text-justify">
               My focus is creating fast, scalable, and reliable solutions that solve real-world problems while delivering smooth user experiences.
             </p>
           </div>
           <div className="flex">
-            <img src="/star.png" alt="star icon" className="w-8 h-8 mr-1.5" />
+            <img src="./star.png" alt="star icon" className="w-8 h-8 mr-1.5" />
             <p className="text-gray-300 leading-relaxed mb-6 mt-0.5 text-justify">
               I combine creativity with clean development practices to build responsive, performance-optimized, and future-ready products.
             </p>
           </div>
           <div className="flex">
-            <img src="/star.png" alt="star icon" className="w-8 h-8 mr-1.5" />
+            <img src="./star.png" alt="star icon" className="w-8 h-8 mr-1.5" />
             <p className="text-gray-300 leading-relaxed mb-6 mt-0.5 text-justify">
               Passionate about turning ideas into impact, I help bring your vision to life with digital solutions tailored to your goals.
             </p>

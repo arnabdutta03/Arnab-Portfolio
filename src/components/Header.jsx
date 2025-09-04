@@ -40,7 +40,7 @@ function Header() {
 
       <nav className="backdrop-blur-sm bg-black/10 px-8 py-3 rounded-full shadow-lg flex gap-10 font-medium text-stone-300">
 
-        <img src="/star.png" alt="star" width={20} />
+        <img src="./star.png" alt="star" width={20} />
         {navLinks.map((link) => (
           <a
             key={link.name}
@@ -51,7 +51,7 @@ function Header() {
             {link.name}
           </a>
         ))}
-        <img src="/star.png" alt="star" width={20} className="glow-hover-text" />
+        <img src="./star.png" alt="star" width={20} />
       </nav>
     </header>
   );
