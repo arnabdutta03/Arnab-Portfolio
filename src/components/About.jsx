@@ -13,7 +13,7 @@ function About() {
           <h2 className="text-6xl font-bold text-white mb-6 text-center">
             About Me
           </h2>
-          <p className="text-gray-300 leading-relaxed mb-6 text-justify">
+          <p className="text-gray-300 leading-relaxed mb-6 text-justify font-glacial-bold">
             I specialize in turning ideas into fast, scalable, and visually striking web applications. With expertise in React, Node.js, and modern tools, I craft digital experiences that are not only functional but unforgettable. Ready to build something amazing?
           </p>
 

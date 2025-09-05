@@ -1,5 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@font-face {
+  font-family: "Etna";
+  src: url("./fonts/etna-free-font.woff2") format("woff2");
+}
+
+/* Regular */
+@font-face {
+  font-family: "Glacial";
+  src:
+    url("./fonts/GlacialIndifference-Regular.woff2") format("woff2"),
+    url("./fonts/GlacialIndifference-Regular.woff") format("woff"),
+    url("./fonts/GlacialIndifference-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Glacial-bold";
+  src:
+    url("./fonts/GlacialIndifference-Bold.woff2") format("woff2"),
+    url("./fonts/GlacialIndifference-Bold.woff") format("woff"),
+    url("./fonts/GlacialIndifference-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
+
+
+@theme {
+  --font-glacial: "Glacial", 'Outfit';
+  --font-glacial-bold: "Glacial-bold", 'Outfit';
+  --font-Etna: "Etna", 'Outfit';
+}
+
 
 body.light {
   /* Light Mode */
@@ -27,7 +65,7 @@ html,
 body,
 #root {
   height: 100%;
-  font-family: "Outfit", sans-serif;
+  font-family: 'Outfit',"Etna","Glacial";
 }
 
 @layer utilities {
