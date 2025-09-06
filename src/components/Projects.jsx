@@ -6,22 +6,22 @@ const projects = [
 
     description: "Creative self-built projects and experiments where I explored modern UI, animations, and full-stack concepts.",
 
-    bg: "bg-[url('./pexels2.jpg')] bg-cover bg-center",
+    bg: "bg-[url('/pexels2.jpg')] bg-cover bg-center",
 
     personalProjects: [
       {
         name: "Nox Threads",
-        bg: "bg-[url('./project/noxThreads.png')] bg-cover bg-center",
+        bg: "bg-[url('/project/noxThreads.png')] bg-cover bg-center",
         des: "E-commerce platform for custom T-shirts."
       },
       {
         name: "Movie Discovery",
-        bg: "bg-[url('./project/movieDiscovery.png')] bg-cover bg-center",
+        bg: "bg-[url('/project/movieDiscovery.png')] bg-cover bg-center",
         des: "Browse and explore trending movies."
       },
       {
         name: "Code Canvas",
-        bg: "bg-[url('./project/CodeCanvas.png')] bg-cover bg-center",
+        bg: "bg-[url('/project/CodeCanvas.png')] bg-cover bg-center",
         des: "A Developer community platform."
 
       }
@@ -31,21 +31,21 @@ const projects = [
     title: "Showcase",
     description:
       "Skill-driven practice projects including dashboards, landing pages, and interactive apps built to sharpen my craft.",
-    bg: "bg-[url('./pexels.jpg')] bg-cover bg-center",
+    bg: "bg-[url('/pexels.jpg')] bg-cover bg-center",
     personalProjects: [
       {
         name: "Hungry Campus",
-        bg: "bg-[url('./project/hungeryCampus.png')] bg-cover bg-center",
+        bg: "bg-[url('/project/hungeryCampus.png')] bg-cover bg-center",
         des: "Smart food ticketing for college canteens."
       },
       {
         name: "Movie Discovery",
-        bg: "bg-[url('./project/movieDiscovery.png')] bg-cover bg-center",
+        bg: "bg-[url('/project/movieDiscovery.png')] bg-cover bg-center",
         des: "Browse and explore trending movies."
       },
       {
         name: "Sales Tracking",
-        bg: "bg-[url('./project/Admin.png')] bg-cover bg-center",
+        bg: "bg-[url('/project/Admin.png')] bg-cover bg-center",
         des: "Smart food ticketing for college canteens."
       }
     ]
@@ -54,21 +54,21 @@ const projects = [
     title: "Learning",
     description:
       "Hands-on projects from my learning journey — from small apps to design systems — reflecting my growth as a developer.",
-    bg: "bg-[url('./pexels3.jpg')] bg-cover bg-center",
+    bg: "bg-[url('/pexels3.jpg')] bg-cover bg-center",
     personalProjects: [
       {
         name: "Nox Threads",
-        bg: "bg-[url('./project/noxThreads.png')] bg-cover bg-center",
+        bg: "bg-[url('/project/noxThreads.png')] bg-cover bg-center",
         des: "E-commerce platform for custom T-shirts."
       },
       {
         name: "Movie Discovery",
-        bg: "bg-[url('./project/movieDiscovery.png')] bg-cover bg-center",
+        bg: "bg-[url('/project/movieDiscovery.png')] bg-cover bg-center",
         des: "Browse and explore trending movies."
       },
       {
         name: "Hungry Campus",
-        bg: "bg-[url('./project/hungeryCampus.png')] bg-cover bg-center",
+        bg: "bg-[url('/project/hungeryCampus.png')] bg-cover bg-center",
         des: "Smart food ticketing for college canteens."
       }
     ]
