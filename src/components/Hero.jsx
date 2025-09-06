@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function Hero() {
 
-  const titles = ["Developer", "Designer", "Explorer", "Photographer", "Storyteller", "Dreamer"];
+  const titles = ["Designer", "Developer", "Photographer", "Explorer", "Storyteller", "Dreamer"];
   const [scrollMessage, setScrollMessage] = useState("down");
   const [index, setIndex] = useState(0);
 
@@ -39,9 +39,9 @@ function Hero() {
     <section
       id="home"
       className="bg-[url(/ME.jpg)] bg-center bg-cover text-yellow-50 h-[100vh]">
-      <div className="backdrop-blur-sm bg-green-950/10 w-120 h-64 p-10 rounded-2xl top-55 left-12 relative text-yellow-50">
-        <h1 className="text-9xl font-medium">Hello</h1>
-        <p className="text-xl">— it's Arnab Kumar Dutta, the <span className="text-[#6fffe9] text-shadow-[0px_0px_15px_#02c39a]">{titles[index]}</span></p>
+      <div className="backdrop-blur-sm bg-green-950/10 w-114 h-65 p-10 rounded-2xl top-55 left-12 relative text-yellow-50">
+        <h1 className="text-9xl font-medium pb-2">Hello</h1>
+        <p className="text-xl">— it's Arnab Kr. Dutta, the <span className="bg-stone-700/80 rounded-xl p-2">{titles[index]}</span></p>
       </div>
 
       <div className="backdrop-blur-sm bg-green-50/10 w-40 h-14 rounded-xl fixed top-165 left-330 text-yellow-50 flex items-center justify-center z-99 ">
