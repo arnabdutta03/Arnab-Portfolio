@@ -13,7 +13,7 @@ function About() {
           <h2 className="text-6xl font-bold text-white mb-6 text-center">
             About Me
           </h2>
-          <p className="text-gray-300 leading-relaxed mb-6 text-justify font-glacial-bold">
+          <p className="text-gray-300 leading-relaxed mb-6 text-justify ">
             I specialize in turning ideas into fast, scalable, and visually striking web applications. With expertise in React, Node.js, and modern tools, I craft digital experiences that are not only functional but unforgettable. Ready to build something amazing?
           </p>
 
@@ -21,18 +21,25 @@ function About() {
         </div>
 
         {/* Image / Avatar */}
-        <div>
-          <p className="text-gray-300 leading-relaxed font-medium text-2xl my-8 text-center">
+        <div className="flex flex-col justify-center items-center gap-10">
+          <p className="text-gray-300 leading-relaxed font-medium text-2xl text-center">
             <span className="text-white glow-hover-text">Hola, ¿Cómo Estás?</span>
           </p>
           <div className="flex justify-center">
             <img
-            src="./profile.png"
-            alt="Arnab Dutta"
-            className="w-80 h-80 rounded-2xl shadow-lg object-cover"
-          />
+              src="./profile.png"
+              alt="Arnab Dutta"
+              className="w-80 h-80 rounded-2xl shadow-lg object-cover"
+            />
           </div>
-           
+          <a
+            href="/MyResume.pdf"
+            download="Arnab_Dutta_CV.pdf" //
+            className="w-50 px-3 py-3 bg-white text-stone-800 font-bold rounded-2xl hover:bg-gray-300/80 transition inline-block text-center"
+          >
+            Download CV
+          </a>
+
         </div>
 
         <div className="mr-20 mt-12">

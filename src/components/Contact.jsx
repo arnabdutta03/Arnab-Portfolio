@@ -39,7 +39,7 @@ function Contact() {
                 href="https://github.com/arnabdutta03"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-2xl hover:scale-110 bg-stone-700/80 transition"
+                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
               >
                 <Github size={28} className="text-white" />
               </a>
@@ -47,7 +47,7 @@ function Contact() {
                 href="https://www.linkedin.com/in/arnabkumardutta09/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-2xl hover:scale-110 bg-stone-700/80 transition"
+                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
               >
                 <Linkedin size={28} className="text-white" />
               </a>
@@ -55,7 +55,7 @@ function Contact() {
                 href="https://www.instagram.com/nox_arnab"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-2xl hover:scale-110 bg-stone-700/80 transition"
+                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
               >
                 <Instagram size={28} className="text-white" />
               </a>
@@ -63,7 +63,7 @@ function Contact() {
                 href="https://x.com/nox_arnab"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-2xl hover:scale-110 bg-stone-700/80 transition"
+                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
               >
                 <Twitter size={28} className="text-white" />
               </a>
@@ -71,7 +71,7 @@ function Contact() {
                 href="https://x.com/nox_arnab"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-2xl hover:scale-110 bg-stone-700/80 transition"
+                className="resize-none p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
               >
                 <Facebook size={28} className="text-white" />
               </a>
@@ -83,11 +83,11 @@ function Contact() {
             <div className="w-full bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-stone-600/40 shadow-lg flex flex-col gap-6">
               {/* Email */}
               <div className="flex items-center gap-3 justify-center">
-                <span className="text-xl font-semibold">
+                <span className="text-2xl font-semibold">
                   Contact me:
                 </span>
-                <span className="text-xl font-glacial-bold">
-                  arnabdutta0x0x@gmail.com
+                <span className="text-2xl font-light">
+                  arnabdutta0x0@gmail.com
                 </span>
                 <Mail size={20} className="text-white mt-1" />
               </div>
@@ -104,8 +104,9 @@ function Contact() {
               <textarea
                 rows="5"
                 placeholder="Your Message"
-                className="w-full p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white"
+                className="w-full p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white resize-none"
               />
+
               <button
                 type="submit"
                 className="w-full px-6 py-3 bg-white text-stone-900 font-bold rounded-2xl hover:bg-gray-300 transition"
