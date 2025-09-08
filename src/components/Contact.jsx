@@ -31,11 +31,11 @@ function Contact() {
           {/* Left Side - Info */}
           <div className="flex flex-col gap-6 text-white ">
             {/* Photo + Name */}
-            <div className="flex flex-col items-center text-center gap-4">
+            <div className="flex flex-col items-center text-center gap-4 mt-10">
               <img
                 src="./ME.jpg"
                 alt="Arnab Dutta"
-                className="w-48 h-48 rounded-full border-4 border-stone-600/50 shadow-lg object-cover"
+                className="w-48 h-48 rounded-3xl border-4 border-stone-600/50 shadow-lg object-cover"
               />
               <h3 className="text-3xl font-bold">Arnab Kumar Dutta</h3>
               <p className="text-lg leading-relaxed text-justify mx-12">
@@ -51,48 +51,48 @@ function Contact() {
                 href="https://github.com/arnabdutta03"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
+                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110 hover:outline-none hover:ring-2 hover:ring-white  transition "
               >
-                <Github size={10} className="text-white" />
+                <Github size={24} className="text-white" />
               </a>
               <a
                 href="https://www.linkedin.com/in/arnabkumardutta09/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
+                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110 hover:outline-none hover:ring-2 hover:ring-white transition"
               >
-                <Linkedin size={10} className="text-white" />
+                <Linkedin size={24} className="text-white" />
               </a>
               <a
                 href="https://www.instagram.com/nox_arnab"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
+                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110 hover:outline-none hover:ring-2 hover:ring-white transition"
               >
-                <Instagram size={10} className="text-white" />
+                <Instagram size={24} className="text-white" />
               </a>
               <a
                 href="https://x.com/nox_arnab"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
+                className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110 hover:outline-none hover:ring-2 hover:ring-white transition"
               >
-                <Twitter size={10} className="text-white" />
+                <Twitter size={24} className="text-white" />
               </a>
               <a
                 href="https://x.com/nox_arnab"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="resize-none p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110  transition"
+                className="resize-none p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110 hover:outline-none hover:ring-2 hover:ring-white transition"
               >
-                <Facebook size={10} className="text-white" />
+                <Facebook size={24} className="text-white" />
               </a>
             </div>
           </div>
 
           {/* Right Side - Form */}
           <form className="flex flex-col gap-4 items-center">
-            <div className="w-full bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-stone-600/40 shadow-lg flex flex-col gap-6">
+            <div className="w-full bg-stone-800/40 border-2 border-stone-600/30 backdrop-blur-md p-6 rounded-3xl shadow-lg flex flex-col gap-6">
               {/* Email */}
               <div className="flex items-center gap-3 justify-center">
                 <span className="text-2xl font-semibold">
@@ -150,7 +150,7 @@ function Contact() {
             {/* Photo + Name */}
 
             <img src="./ME.jpg" alt="Arnab Dutta"
-              className="w-30 h-30 rounded-full border-4 border-stone-600/50 shadow-lg object-cover" />
+              className="w-30 h-30 rounded-3xl border-4 border-stone-600/50 shadow-lg object-cover" />
 
             <h3 className="text-xl font-bold">Arnab Kumar Dutta</h3>
 
@@ -208,7 +208,7 @@ function Contact() {
 
           {/* Right Side - Form */}
           <form className="flex flex-col gap-4 items-center">
-            <div className=" w-70 bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-stone-600/40 shadow-lg flex flex-col gap-6">
+            <div className=" w-70 backdrop-blur-md p-6 rounded-3xl bg-stone-800/40 border-2 border-stone-600/30 shadow-lg flex flex-col gap-6">
 
               {/* Email */}
               <div className="text-md font-light flex flex-col items-center">

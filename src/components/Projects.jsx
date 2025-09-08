@@ -40,24 +40,6 @@ function Projects() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
   const [active, setActive] = useState(window.innerWidth < 640 ? null : 0);
   const [showDesc, setShowDesc] = useState(window.innerWidth < 640 ? null : 0);
-  const [pending, setPending] = useState(null);
-
-  // 🔽 Handle desktop transitions
-  useEffect(() => {
-    if (pending === null) return;
-
-    setShowDesc(null); // hide current
-    const timeout1 = setTimeout(() => setActive(pending), 500);
-    const timeout2 = setTimeout(() => {
-      setShowDesc(pending);
-      setPending(null);
-    }, 1000);
-
-    return () => {
-      clearTimeout(timeout1);
-      clearTimeout(timeout2);
-    };
-  }, [pending]);
 
   // 🔽 Handle resize
   useEffect(() => {
@@ -73,9 +55,17 @@ function Projects() {
   }, []);
 
   const handleClick = (i) => {
-    if (i === active) return;
-    setPending(i);
+    if (active === i) {
+      // collapse
+      setActive(0);
+      setShowDesc(0);
+    } else {
+      // expand
+      setActive(i);
+      setShowDesc(i);
+    }
   };
+
 
   const DesktopProjects = () => (
     <section id="projects" className="bg-stone-900 min-h-[100vh] flex items-center justify-center px-6">
@@ -84,44 +74,94 @@ function Projects() {
           <h2 className="text-6xl font-bold text-white mb-6 text-center">Projects</h2>
         </div>
         <div className="flex gap-4 w-full max-w-full overflow-hidden ml-3">
+
+
+
           {projects.map((p, i) => (
             <div
               key={i}
               onClick={() => handleClick(i)}
-              className={`relative transition-all duration-700 ease-in-out rounded-3xl flex-shrink-0 ${active === i ? "w-[70%]" : "w-[13%]"} h-[500px] text-white shadow-lg`}
+              className={`relative transition-all duration-700 ease-in-out rounded-3xl flex-shrink-0 
+      ${active === i ? "w-[70%]" : "w-[13%]"} 
+      h-[500px] text-white shadow-lg`}
             >
+              {/* Background */}
               <div className={`absolute inset-0 ${p.bg} rounded-3xl bg-cover bg-center`} />
               <div className="absolute inset-0 bg-stone-900/35 border-2 border-stone-600/30 drop-shadow-2xl rounded-3xl" />
 
+              {/* Content */}
               <div className="absolute p-8 flex flex-col w-full h-full">
-                <h2 className={`font-bold whitespace-nowrap transition-all duration-500 ease-in-out ${active === i ? "text-4xl mb-4 rotate-0 relative top-0 left-0 opacity-100" : "absolute -rotate-90 top-1/2 left-3 -translate-y-1/2 text-4xl opacity-100"}`}>
+
+                {/* Title */}
+                <h2
+                  className={`font-bold whitespace-nowrap transition-all duration-500 ease-in-out
+          ${active === i
+                      ? "text-4xl mb-4 rotate-0 relative top-0 left-0 opacity-100"
+                      : "absolute -rotate-90 top-1/2 left-3 -translate-y-1/2 text-4xl opacity-100"
+                    }`}
+                >
                   {p.title}
                 </h2>
 
-                <div className={`transition-all duration-500 text-justify ease-in-out overflow-hidden ${showDesc === i ? "opacity-100 translate-y-0 max-h-[300px]" : "opacity-0 translate-y-5 max-h-0"}`}>
+                {/* Description */}
+                <div
+                  className={`transition-all duration-500 ease-in-out overflow-hidden
+          ${showDesc === i
+                      ? "opacity-100 translate-y-0 max-h-[300px]"
+                      : "opacity-0 translate-y-5 max-h-0"
+                    }`}
+                >
                   <p className="text-lg max-w-md leading-relaxed">{p.description}</p>
                 </div>
 
-                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 transition-all duration-500 ease-in-out ${showDesc === i ? "opacity-100 translate-y-0 h-[270px]" : "opacity-0 translate-y-5 max-h-0"}`}>
+                {/* Personal Projects */}
+                <div
+                  className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 
+          transition-all duration-500 ease-in-out
+          ${showDesc === i
+                      ? "opacity-100 translate-y-0 h-[270px]"
+                      : "opacity-0 translate-y-5 max-h-0"
+                    }`}
+                >
                   {p.personalProjects?.map((proj, idx) => (
-                    <div key={idx} className="group relative rounded-2xl shadow-md overflow-hidden bg-stone-900/90 hover:shadow-xl hover:shadow-stone-700/40 transition-all duration-500">
-                      <div className={`${proj.bg} w-full h-40 bg-cover bg-center group-hover:scale-105 transition-transform duration-500`} />
+                    <div
+                      key={idx}
+                      className="group relative rounded-2xl shadow-md overflow-hidden 
+              bg-stone-900/90 hover:shadow-xl hover:shadow-stone-700/40 
+              transition-all duration-500"
+                    >
+                      {/* Project Thumbnail */}
+                      <div
+                        className={`${proj.bg} w-full h-40 bg-cover bg-center 
+                group-hover:scale-105 transition-transform duration-500`}
+                      />
+
+                      {/* Project Content */}
                       <div className="p-4">
-                        <h3 className="text-xl font-semibold text-white group-hover: transition-colors duration-300">{proj.name}</h3>
-                        <p className="text-sm text-gray-300 mt-2 leading-relaxed">{proj.des}</p>
+                        <h3 className="text-xl font-semibold text-white">
+                          {proj.name}
+                        </h3>
+                        <p className="text-sm text-gray-300 mt-2 leading-relaxed">
+                          {proj.des}
+                        </p>
                       </div>
-                      <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:transition-all duration-500 pointer-events-none" />
                     </div>
                   ))}
                 </div>
               </div>
             </div>
           ))}
+
+
+
+
+
         </div>
       </div>
     </section>
   );
 
+  // 🔽 Mobile untouched
   const MobileProjects = () => {
     const containerRef = useRef(null);
 
@@ -149,8 +189,10 @@ function Projects() {
                   <div className={`absolute inset-0 ${p.bg} bg-cover bg-center`} />
                   <div className="absolute inset-0 bg-stone-900/35 rounded-3xl" />
 
-                  <div className="relative flex items-center justify-between p-4 cursor-pointer"
-                       onClick={() => isOpen ? (setShowDesc(null), setActive(null)) : (setActive(i), setShowDesc(i))}>
+                  <div
+                    className="relative flex items-center justify-between p-4 cursor-pointer"
+                    onClick={() => isOpen ? (setShowDesc(null), setActive(null)) : (setActive(i), setShowDesc(i))}
+                  >
                     <h3 className="text-xl font-bold text-white">{p.title}</h3>
                     {!isOpen ? <img src="./down.png" alt="Expand" className="w-5 h-5 ml-2" /> : <img src="./down.png" alt="Expand" className="w-5 h-5 ml-2 rotate-180" />}
                   </div>

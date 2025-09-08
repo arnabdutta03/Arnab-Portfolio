@@ -65,11 +65,11 @@ function Hero() {
       id="home"
       className="bg-[url(/ME.jpg)] bg-center bg-cover text-yellow-50 min-h-[100vh] flex flex-col justify-center items-center px-4"
     >
-      <h1 className="backdrop-blur-sm bg-green-950/20  p-4 rounded-2xl text-6xl font-semibold mb-8">
+      <h1 className="backdrop-blur-sm bg-green-950/20  p-4 rounded-2xl text-6xl font-semibold relative -top-50">
         Hello
       </h1>
 
-      <div className="backdrop-blur-sm bg-green-950/20 w-85 max-w-sm p-6 rounded-xl text-center mt-80 ">
+      <div className="backdrop-blur-sm bg-green-950/20 w-85 max-w-sm pt-4 pb-4 pr-0 pl-0 rounded-xl text-center relative top-50 ">
         <p className="text-md">
           — it's Arnab Kr. Dutta, the{" "}
           <span className="bg-stone-700/80 rounded-lg px-2 py-1">{titles[index]}</span>
