@@ -119,7 +119,7 @@ function About() {
             />
           </div>
           <a
-            href="/MyResume.pdf"
+            href="https://drive.google.com/file/d/1uquIFLOwtd9_udGrbQSFkHdCPKW9lNKq/view"
             download="Arnab_Dutta_CV.pdf"
             className="m-auto sm:w-40 px-4 py-3 bg-white text-stone-800 font-bold rounded-2xl hover:bg-gray-300/80 transition text-center"
           >
