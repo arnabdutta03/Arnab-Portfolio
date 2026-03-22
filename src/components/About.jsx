@@ -118,8 +118,8 @@ function About() {
             />
           </div>
           <a
-            href="https://drive.google.com/file/d/1uquIFLOwtd9_udGrbQSFkHdCPKW9lNKq/view"
-            className="m-auto sm:w-40 px-4 py-3 bg-white text-stone-800 font-bold rounded-2xl hover:bg-gray-300/80 transition text-center"
+            href="https://drive.google.com/uc?export=download&id=1GTNNmUouul7s1ZqZ0664r61rOAt7ONk9"
+            className="w-50 px-3 py-3 bg-white text-stone-800 font-bold rounded-2xl hover:bg-gray-300/80 transition inline-block text-center"
           >
             Download CV
           </a>
