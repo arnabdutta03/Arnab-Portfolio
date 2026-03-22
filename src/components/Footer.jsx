@@ -6,7 +6,7 @@ function Footer() {
                 Built with 💙
                 <span className="mx-4 font-extrabold">|</span>
                 Developed by 
-                <span className="font-semibold text-blue-400">
+                <span className="font-semibold text-blue-400 ml-0.5">
                     <a href="https://www.linkedin.com/in/arnabkumardutta09"> Arnab Kumar Dutta</a>
                 </span>
             </h3>
