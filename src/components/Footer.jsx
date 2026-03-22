@@ -5,7 +5,7 @@ function Footer() {
             <h3 className="font-medium">
                 Built with 💙
                 <span className="mx-4 font-extrabold">|</span>
-                Developed by
+                Developed by 
                 <span className="font-semibold text-blue-400">
                     <a href="https://www.linkedin.com/in/arnabkumardutta09">Arnab Kumar Dutta</a>
                 </span>
