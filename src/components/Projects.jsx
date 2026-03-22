@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const projects = [
   {
@@ -41,6 +41,19 @@ function Projects() {
   const [active, setActive] = useState(window.innerWidth < 640 ? null : 0);
   const [showDesc, setShowDesc] = useState(window.innerWidth < 640 ? null : 0);
 
+
+  const handleClick = (i) => {
+    if (active === i) {
+      // collapse
+      setActive(0);
+      setShowDesc(0);
+    } else {
+      setActive(i);
+      setShowDesc(i);
+    }
+  };
+
+
   // 🔽 Handle resize
   useEffect(() => {
     const handleResize = () => {
@@ -54,18 +67,6 @@ function Projects() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleClick = (i) => {
-    if (active === i) {
-      // collapse
-      setActive(0);
-      setShowDesc(0);
-    } else {
-      // expand
-      setActive(i);
-      setShowDesc(i);
-    }
-  };
-
 
   const DesktopProjects = () => (
     <section id="projects" className="bg-stone-900 min-h-[100vh] flex items-center justify-center px-6">
@@ -74,9 +75,7 @@ function Projects() {
           <h2 className="text-6xl font-bold text-white mb-6 text-center">Projects</h2>
         </div>
         <div className="flex gap-4 w-full max-w-full overflow-hidden ml-3">
-
-
-
+          
           {projects.map((p, i) => (
             <div
               key={i}
@@ -151,37 +150,22 @@ function Projects() {
               </div>
             </div>
           ))}
-
-
-
-
-
+        
         </div>
       </div>
     </section>
   );
 
+
+
   // 🔽 Mobile untouched
   const MobileProjects = () => {
-    const containerRef = useRef(null);
-
-    useEffect(() => {
-      if (!isMobile) return;
-      const handleClickOutside = (event) => {
-        if (containerRef.current && !containerRef.current.contains(event.target)) {
-          setShowDesc(null);
-          setActive(null);
-        }
-      };
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, [isMobile]);
 
     return (
       <section id="projects" className="bg-stone-900 min-h-[0vh] flex flex-col items-center px-4 py-10">
         <div className="w-full max-w-sm bg-stone-300/10 rounded-3xl p-6">
           <h2 className="text-4xl font-bold text-white mb-6 text-center">Projects</h2>
-          <div ref={containerRef} className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             {projects.map((p, i) => {
               const isOpen = showDesc === i;
               return (
@@ -190,7 +174,8 @@ function Projects() {
                   <div className="absolute inset-0 bg-stone-900/35 rounded-3xl" />
 
                   <div
-                    className="relative flex items-center justify-between p-4 cursor-pointer"
+
+                    className="relative flex items-center justify-between p-4 cursor-pointer "
                     onClick={() => isOpen ? (setShowDesc(null), setActive(null)) : (setActive(i), setShowDesc(i))}
                   >
                     <h3 className="text-xl font-bold text-white">{p.title}</h3>

@@ -123,3 +123,14 @@ body,
   }
 }
 
+
+
+.project-card {
+  flex: 1;
+  height: 500px;
+  transition: flex 0.7s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.project-card.active {
+  flex: 7;
+}

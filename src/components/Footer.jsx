@@ -7,7 +7,7 @@ function Footer() {
                 <span className="mx-4 font-extrabold">|</span>
                 Developed by
                 <span className="font-semibold text-blue-400">
-                    <a href="https://www.linkedin.com/in/arnabkumardutta09">Arnab Kumar Dutta</a>
+                    <a href="https://www.linkedin.com/in/arnabkumardutta09"> Arnab Kumar Dutta</a>
                 </span>
             </h3>
         </footer>

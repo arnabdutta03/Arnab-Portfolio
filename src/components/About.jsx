@@ -46,9 +46,8 @@ function About() {
               className="w-80 h-80 rounded-2xl shadow-lg object-cover"
             />
           </div>
-          <a
-            href="/MyResume.pdf"
-            download="Arnab_Dutta_CV.pdf" //
+           <a
+            href="https://drive.google.com/uc?export=download&id=1GTNNmUouul7s1ZqZ0664r61rOAt7ONk9"
             className="w-50 px-3 py-3 bg-white text-stone-800 font-bold rounded-2xl hover:bg-gray-300/80 transition inline-block text-center"
           >
             Download CV
@@ -119,8 +118,7 @@ function About() {
             />
           </div>
           <a
-            href="/MyResume.pdf"
-            download="Arnab_Dutta_CV.pdf"
+            href="https://drive.google.com/uc?export=download&id=1GTNNmUouul7s1ZqZ0664r61rOAt7ONk9"
             className="m-auto sm:w-40 px-4 py-3 bg-white text-stone-800 font-bold rounded-2xl hover:bg-gray-300/80 transition text-center"
           >
             Download CV
