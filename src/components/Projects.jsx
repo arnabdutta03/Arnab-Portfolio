@@ -19,7 +19,7 @@ const projects = [
     bg: "bg-[url('/pexels.jpg')] bg-cover bg-center",
     personalProjects: [
       { name: "Hungry Campus", bg: "bg-[url('/project/hungeryCampus.png')] bg-cover bg-center", des: "Smart food ticketing for college canteens." },
-      { name: "Movie Discovery", bg: "bg-[url('/project/movieDiscovery.png')] bg-cover bg-center", des: "Browse and explore trending movies." },
+      { name: "Task Manager", bg: "bg-[url('/project/task.png')] bg-cover bg-center",  des: "Organize tasks, manage deadlines, and track productivity." },
       { name: "Sales Tracking", bg: "bg-[url('/project/Admin.png')] bg-cover bg-center", des: "Smart food ticketing for college canteens." }
     ]
   },
