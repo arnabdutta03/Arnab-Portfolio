@@ -12,47 +12,59 @@ function Header() {
   const [activeBar, setActiveBar] = useState("Home");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
+  // detect active section
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const matchedLink = navLinks.find(
-              (link) => link.href === `#${entry.target.id}`
-            );
-            if (matchedLink) setActiveBar(matchedLink.name);
-          }
-        });
-      },
-      {
-        // Multiple thresholds to detect partial visibility
-        threshold: [0.1, 0.25, 0.5, 0.75, 1],
-      }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    // Scroll fallback: if at top, force Home
     const handleScroll = () => {
-      if (window.scrollY < 50) setActiveBar("Home");
+
+      const sections = document.querySelectorAll("section[id]");
+
+
+      sections.forEach((section) => {
+        const top = section.offsetTop - 200;
+        const height = section.offsetHeight;
+        const id = section.getAttribute("id");
+
+        if (
+          window.scrollY >= top &&
+          window.scrollY < top + height
+        ) {
+          const matched = navLinks.find(
+            (link) => link.href === `#${id}`
+          );
+
+          if (matched) {
+            setActiveBar(matched.name);
+          }
+        }
+      });
+
+      if (window.scrollY < 50) {
+        setActiveBar("Home");
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [navLinks]);
+
+  }, []);
 
 
   useEffect(() => {
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 640);
     };
+
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+
   }, []);
 
   // ✅ Desktop Header
@@ -86,7 +98,7 @@ function Header() {
             key={link.name}
             href={link.href}
             onClick={() => setActiveBar(link.name)}
-            className={`text-xs hover:text-white hover:transition-colors duration-500 ${activeBar === link.name ? "text-white underline" : ""
+            className={`text-xs hover:text-white hover:transition-colors duration-500 ${activeBar === link.name ? "text-white glow-hover-text" : ""
               }`}
           >
             {link.name}
