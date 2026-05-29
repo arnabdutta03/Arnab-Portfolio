@@ -5,6 +5,17 @@ function Hero() {
   const [scrollMessage, setScrollMessage] = useState("down");
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  
+  
+  const handleScroll = () => {
+    if (scrollMessage === 'up') {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setScrollMessage("down");
+    } else {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      setScrollMessage("up");
+    }
+  }
 
 
   const handleScroll = () => {
