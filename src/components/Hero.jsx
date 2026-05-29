@@ -17,17 +17,6 @@ function Hero() {
     }
   }
 
-
-  const handleScroll = () => {
-    if (scrollMessage === 'up') {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      setScrollMessage("down");
-    } else {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-      setScrollMessage("up");
-    }
-  }
-
   // 🔽 Detect scroll position (to toggle scroll message)
   useEffect(() => {
     const handleScroll = () => {
