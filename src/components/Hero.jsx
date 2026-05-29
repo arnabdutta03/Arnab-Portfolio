@@ -5,6 +5,17 @@ function Hero() {
   const [scrollMessage, setScrollMessage] = useState("down");
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  
+  
+  const handleScroll = () => {
+    if (scrollMessage === 'up') {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setScrollMessage("down");
+    } else {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      setScrollMessage("up");
+    }
+  }
 
   // 🔽 Detect scroll position (to toggle scroll message)
   useEffect(() => {
@@ -52,7 +63,7 @@ function Hero() {
         </p>
       </div>
 
-      <div className="backdrop-blur-sm bg-green-50/10 w-40 h-14 rounded-xl fixed top-165 left-330 text-yellow-50 flex items-center justify-center z-99 ">
+      <div onClick={handleScroll} className="backdrop-blur-sm bg-green-50/10 w-40 h-14 rounded-xl fixed top-165 left-330 text-yellow-50 flex items-center justify-center z-99 ">
         <p className="text-xl">{scrollMessage === "down" ? "Scroll Down" : "Scroll Up"}</p>
         <p className="mt-1 ml-1 text-2xl">{scrollMessage === "down" ? "↓" : "↑"}</p>
       </div>
