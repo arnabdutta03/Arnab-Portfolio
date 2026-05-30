@@ -101,7 +101,7 @@ function About() {
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             About Me
           </h2>
-          <p className=" text-gray-300 w-60 m-auto leading-relaxed text-justify text-base text-sm">
+          <p className=" text-gray-300 w-60 m-auto leading-relaxed text-justify text-sm sm:text-base">
             I specialize in turning ideas into fast, scalable, and visually striking web applications. With expertise in React, Node.js, and modern tools, I craft digital experiences that are not only functional but unforgettable. Ready to build something amazing?
           </p>
         </div>
@@ -136,7 +136,7 @@ function About() {
             "Passionate about turning ideas into impact, I help bring your vision to life with digital solutions tailored to your goals."
           ].map((text, index) => (
             <div key={index} className="flex items-start gap-2">
-              <img src="./star.png" alt="star icon" className="w-6 h-6 mt-1" />
+              <img src="./star.png" alt="star icon" className="w-6 h-6" />
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed text-justify">{text}</p>
             </div>
           ))}
