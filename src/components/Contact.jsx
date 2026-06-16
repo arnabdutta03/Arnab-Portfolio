@@ -64,7 +64,7 @@ function Contact() {
                 <Linkedin size={24} className="text-white" />
               </a>
               <a
-                href="https://www.instagram.com/nox_arnab"
+                href="https://www.instagram.com/nox.arnab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110 hover:outline-none hover:ring-2 hover:ring-white transition"
@@ -179,7 +179,7 @@ function Contact() {
                 <Linkedin size={14} className="text-white" />
               </a>
               <a
-                href="https://www.instagram.com/nox_arnab"
+                href="https://www.instagram.com/nox.arnab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-2xl bg-stone-700/60 border-2 border-stone-600/30 drop-shadow-xl hover:scale-110 transition"
