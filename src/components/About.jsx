@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-
 function About() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
