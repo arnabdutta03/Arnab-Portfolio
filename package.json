@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://arnabdutta03.github.io/Arnab-Portfolio",
+  // "homepage": "https://arnabdutta03.github.io/Arnab-Portfolio",
+  "homepage": ".",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
